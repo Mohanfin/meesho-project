@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meesho - Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <a href="https://www.meesho.com/">Meesho</a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input 
+    type="text"
+    id="searchInput"
+    placeholder="Search for products, brands and more"
+    onkeyup="searchProducts()"
+>
+    </div>
+
+    <!-- Login -->
+    <div class="nav-item login">
+    <span>👤</span>
+    <a href="https://www.meesho.com/login">Login</a>
+</div>
+
+    <!-- Cart -->
+    <div class="nav-item cart">
+        <span>🛒</span>
+        <a href="https://www.meesho.com/cart">Cart</a>
+
+        <span class="cart-count">0</span>
+    </div>
+
+</header>
+<!-- Categories Bar -->
+<nav class="categories">
+
+    <a href="https://www.meesho.com/women">Women</a>
+    <a href="https://www.meesho.com/men">Men</a>
+    <a href="https://www.meesho.com/kids">Kids</a>
+    <a href="https://www.meesho.com/beauty">Beauty</a>
+    <a href="https://www.meesho.com/home-kitchen">Home & Kitchen</a>
+    <a href="https://www.meesho.com/electronics">Electronics</a>
+    <a href="https://www.meesho.com/footwear">Footwear</a>
+    <a href="https://www.meesho.com/jewellery">Jewellery</a>
+
+</nav>
+<!-- Hero Banner -->
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Big Fashion Deals</h1>
+
+        <h2>Lowest Prices • Best Quality</h2>
+
+        <p>
+            Discover amazing products at affordable prices.
+        </p>
+
+        <div class="hero-features">
+            <span>🚚 Free Delivery</span>
+            <span>💰 Cash on Delivery</span>
+            <span>⭐ Quality Products</span>
+        </div>
+
+        <button class="shop-btn">Shop Now</button>
+    </div>
+
+    <div class="hero-image">
+        <div class="offer-circle">
+            <strong>50%</strong>
+            <span>OFF</span>
+        </div>
+    </div>
+
+</section>
+<!-- Products Section -->
+<section class="products-section">
+
+    <h2>Popular Products</h2>
+
+    <div class="product-container">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+
+            <img src="image.1/product1.jpg.jpg" alt="Women's Saree">
+
+            <div class="product-info">
+
+                <h3 class="product-name">Women's Designer Saree</h3>
+
+                <p class="price">₹599</p>
+
+                <p class="rating">⭐ 4.5</p>
+
+                <p class="delivery">Free Delivery</p>
+
+                <div class="product-buttons">
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+                    <button class="buy-btn" onclick="buyNow('Women Designer Saree', 599)">
+    Buy Now
+</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 2 -->
+        <div class="product-card">
+
+            <img src="image.1/product2.jpg.jpg" alt="Men's Shirt">
+
+            <div class="product-info">
+
+                <h3 class="product-name">Men's Casual Shirt</h3>
+
+                <p class="price">₹499</p>
+
+                <p class="rating">⭐ 4.3</p>
+
+                <p class="delivery">Free Delivery</p>
+
+                <div class="product-buttons">
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                    <button class="buy-btn" onclick="buyNow('Men Casual Shirt', 499)">
+    Buy Now
+</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 3 -->
+        <div class="product-card">
+
+            <img src="image.1/product3.jpg.jpg" alt="Women's Handbag">
+
+            <div class="product-info">
+
+                <h3 class="product-name">Women's Stylish Handbag</h3>
+
+                <p class="price">₹399</p>
+
+                <p class="rating">⭐ 4.4</p>
+
+                <p class="delivery">Free Delivery</p>
+
+                <div class="product-buttons">
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                    <button class="buy-btn" onclick="buyNow('Women Stylish Handbag', 399)">
+    Buy Now
+</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product 4 -->
+        <div class="product-card">
+
+            <img src="image.1/product4.jpg.jpg" alt="Beauty Product">
+
+            <div class="product-info">
+
+                <h3 class="product-name">Beauty Care Combo</h3>
+
+                <p class="price">₹699</p>
+
+                <p class="rating">⭐ 4.6</p>
+
+                <p class="delivery">Free Delivery</p>
+
+                <div class="product-buttons">
+                    <button class="cart-btn">
+                        Add to Cart
+                    </button>
+
+                   <button class="buy-btn" onclick="buyNow('Beauty Care Combo', 699)">
+    Buy Now
+</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<button class="cart-btn" onclick="addToCart('Women Designer Saree', 599)">
+    Add to Cart
+</button>
+<button class="cart-btn" onclick="addToCart('Men Casual Shirt', 499)">
+    Add to Cart
+</button>
+<button class="cart-btn" onclick="addToCart('Women Stylish Handbag', 399)">
+    Add to Cart
+</button>
+<button class="cart-btn" onclick="addToCart('Beauty Care Combo', 699)">
+    Add to Cart
+</button>
+
+    <h1>Meesho</h1>
+    <p>Welcome to our online shopping website</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
